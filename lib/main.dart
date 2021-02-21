@@ -4,6 +4,7 @@ import 'package:ungmaimall/states/add_data.dart';
 import 'package:ungmaimall/states/authen.dart';
 import 'package:ungmaimall/states/create_account.dart';
 import 'package:ungmaimall/states/my_service.dart';
+import 'package:ungmaimall/utility/my_style.dart';
 
 final Map<String, WidgetBuilder> map = {
   '/authen': (BuildContext context) => Authen(),
@@ -32,6 +33,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: map,
       initialRoute: iniRoute,
+      theme: ThemeData(
+        inputDecorationTheme: InputDecorationTheme(
+          
+        ),
+      ),
     );
   }
 }

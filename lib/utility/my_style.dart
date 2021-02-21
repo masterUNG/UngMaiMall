@@ -5,6 +5,8 @@ class MyStyle {
   Color primaryColor = Colors.blue.shade300;
   Color lightColor = Colors.grey;
 
+  Widget showProgress() => Center(child: CircularProgressIndicator());
+
   Widget titleH1(String string) => Text(
         string,
         style: TextStyle(
@@ -23,7 +25,7 @@ class MyStyle {
         ),
       );
 
-      Widget titleH2White(String string) => Text(
+  Widget titleH2White(String string) => Text(
         string,
         style: TextStyle(
           color: Colors.white,
