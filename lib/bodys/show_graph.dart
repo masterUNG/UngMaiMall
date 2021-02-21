@@ -73,10 +73,24 @@ class _ShowGraphState extends State<ShowGraph> {
         padding: const EdgeInsets.all(16.0),
         child: productModels.length == 0
             ? Center(child: CircularProgressIndicator())
-            : BarChart(
-                barSeries,
-                animate: true,
-              ),
+            : SingleChildScrollView(
+                          child: Column(
+                  children: [
+                    Container(width: double.infinity,height: MediaQuery.of(context).size.height*0.4,
+                      child: LineChart(
+                        series,
+                        animate: true,
+                      ),
+                    ),
+                    Container(width: double.infinity,height: MediaQuery.of(context).size.height*0.4,
+                      child: BarChart(
+                        barSeries,
+                        animate: true,
+                      ),
+                    ),
+                  ],
+                ),
+            ),
       ),
     );
   }
